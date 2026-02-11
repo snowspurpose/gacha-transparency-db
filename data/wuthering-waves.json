@@ -1,0 +1,307 @@
+{
+  "meta": {
+    "id": "wuthering-waves",
+    "name": "Wuthering Waves",
+    "developer": "Kuro Games",
+    "release_date": "2024-05-23",
+    "last_updated": "2026-02-11"
+  },
+  "game_mechanics": {
+    "character_banner": {
+      "base_rate": 0.008,
+      "soft_pity": {
+        "starts_at": 60,
+        "rate_during_soft_pity": 0.08
+      },
+      "hard_pity": 80,
+      "fifty_fifty": {
+        "enabled": true,
+        "win_rate_first": 0.5,
+        "guaranteed_second": 1
+      },
+      "statistical_averages": {
+        "any_5star": 52,
+        "featured_character": 79
+      },
+      "notes": "Lower hard pity (80 vs 90) and higher base rate (0.8% vs 0.6%) than Genshin"
+    },
+    "weapon_banner": {
+      "base_rate": 0.008,
+      "soft_pity": {
+        "starts_at": 60,
+        "rate_during_soft_pity": 0.08
+      },
+      "hard_pity": 80,
+      "guaranteed": true,
+      "notes": "100% guaranteed featured weapon in 80 pulls - no 50/50 system"
+    },
+    "beginner_banner": {
+      "hard_pity": 50,
+      "discounted_cost": 8,
+      "limited_pulls": 50,
+      "notes": "Best value for new players"
+    }
+  },
+  "currency_system": {
+    "flow": {
+      "premium": "Lunite",
+      "freemium": "Astrite",
+      "item_limited": "Radiant Tide",
+      "item_standard": "Lustrous Tide"
+    },
+    "conversion": {
+      "ratio": 1,
+      "cost_per_pull": 160
+    },
+    "shop_packs": [
+      {
+        "name": "60 Lunite",
+        "price_usd": 0.99,
+        "base_amount": 60,
+        "bonus_first_time": 60,
+        "total_first_time": 120,
+        "pulls_first_time": 0,
+        "cost_per_pull_first": 1.32,
+        "bonus_standard": 0,
+        "total_standard": 60,
+        "pulls_standard": 0,
+        "cost_per_pull_standard": 2.64
+      },
+      {
+        "name": "300 Lunite",
+        "price_usd": 4.99,
+        "base_amount": 300,
+        "bonus_first_time": 300,
+        "total_first_time": 600,
+        "pulls_first_time": 3,
+        "cost_per_pull_first": 1.33,
+        "bonus_standard": 0,
+        "total_standard": 300,
+        "pulls_standard": 1,
+        "cost_per_pull_standard": 2.66
+      },
+      {
+        "name": "980 Lunite",
+        "price_usd": 14.99,
+        "base_amount": 980,
+        "bonus_first_time": 980,
+        "total_first_time": 1960,
+        "pulls_first_time": 12,
+        "cost_per_pull_first": 1.22,
+        "bonus_standard": 0,
+        "total_standard": 980,
+        "pulls_standard": 6,
+        "cost_per_pull_standard": 2.45
+      },
+      {
+        "name": "1980 Lunite",
+        "price_usd": 29.99,
+        "base_amount": 1980,
+        "bonus_first_time": 1980,
+        "total_first_time": 3960,
+        "pulls_first_time": 24,
+        "cost_per_pull_first": 1.21,
+        "bonus_standard": 0,
+        "total_standard": 1980,
+        "pulls_standard": 12,
+        "cost_per_pull_standard": 2.42
+      },
+      {
+        "name": "3280 Lunite",
+        "price_usd": 49.99,
+        "base_amount": 3280,
+        "bonus_first_time": 3280,
+        "total_first_time": 6560,
+        "pulls_first_time": 41,
+        "cost_per_pull_first": 1.22,
+        "bonus_standard": 0,
+        "total_standard": 3280,
+        "pulls_standard": 20,
+        "cost_per_pull_standard": 2.44
+      },
+      {
+        "name": "6480 Lunite",
+        "price_usd": 99.99,
+        "base_amount": 6480,
+        "bonus_first_time": 6480,
+        "total_first_time": 12960,
+        "pulls_first_time": 81,
+        "cost_per_pull_first": 1.23,
+        "bonus_standard": 0,
+        "total_standard": 6480,
+        "pulls_standard": 40,
+        "cost_per_pull_standard": 2.47
+      }
+    ],
+    "notes": "WuWa has NO recurring shop bonus - only first-time 2× bonus"
+  },
+  "free_income": {
+    "daily_missions": {
+      "astrite_per_day": 60,
+      "pulls_per_month": 11.25
+    },
+    "events_monthly": {
+      "astrite_average": 2000,
+      "pulls_per_month": 12.5
+    },
+    "tower_monthly": {
+      "astrite_per_cycle": 400,
+      "pulls_per_month": 5
+    },
+    "total_f2p_monthly": 28.75
+  },
+  "subscriptions": {
+    "lunite_subscription": {
+      "price_usd": 4.99,
+      "lunite_immediate": 300,
+      "astrite_daily": 90,
+      "duration_days": 30,
+      "total_astrite": 2700,
+      "pulls_per_month": 16.875,
+      "cost_per_pull": 0.3
+    }
+  },
+  "cost_per_pull_analysis": {
+    "retail_standard": 2.47,
+    "retail_first_time_bonus": 1.23,
+    "lunite_subscription": 0.3,
+    "note": "WuWa has NO recurring bonus unlike Genshin - first time only!"
+  },
+  "probability_distributions": {
+    "character_banner": {
+      "any_5star": {
+        "p10": 12,
+        "p25": 25,
+        "p50": 52,
+        "p75": 72,
+        "p90": 78,
+        "p99": 80
+      },
+      "guaranteed_featured": {
+        "p10": 65,
+        "p25": 75,
+        "p50": 125,
+        "p75": 145,
+        "p90": 156,
+        "p99": 160
+      }
+    },
+    "weapon_banner": {
+      "guaranteed_featured": {
+        "p10": 12,
+        "p25": 25,
+        "p50": 52,
+        "p75": 72,
+        "p90": 78,
+        "p99": 80
+      }
+    }
+  },
+  "cost_scenarios": {
+    "character_banner": {
+      "any_5star": {
+        "best_case": {
+          "pulls": 12,
+          "cost_retail": 29.63,
+          "cost_subscription": 3.6
+        },
+        "median": {
+          "pulls": 52,
+          "cost_retail": 128.38,
+          "cost_subscription": 15.6
+        },
+        "worst_case": {
+          "pulls": 80,
+          "cost_retail": 197.51,
+          "cost_subscription": 24
+        }
+      },
+      "guaranteed_featured": {
+        "best_case": {
+          "pulls": 65,
+          "cost_retail": 160.48,
+          "cost_subscription": 19.5
+        },
+        "median": {
+          "pulls": 125,
+          "cost_retail": 308.61,
+          "cost_subscription": 37.5
+        },
+        "worst_case": {
+          "pulls": 160,
+          "cost_retail": 395.02,
+          "cost_subscription": 48
+        }
+      }
+    },
+    "weapon_banner": {
+      "guaranteed_featured": {
+        "best_case": {
+          "pulls": 12,
+          "cost_retail": 29.63,
+          "cost_subscription": 3.6
+        },
+        "median": {
+          "pulls": 52,
+          "cost_retail": 128.38,
+          "cost_subscription": 15.6
+        },
+        "worst_case": {
+          "pulls": 80,
+          "cost_retail": 197.51,
+          "cost_subscription": 24
+        }
+      }
+    }
+  },
+  "spending_profiles": {
+    "f2p": {
+      "label": "Free-to-Play",
+      "monthly_cost": 0,
+      "monthly_pulls": 28.75,
+      "months_for_guaranteed_featured": 3,
+      "notes": "Events, dailies, Tower only"
+    },
+    "low_spender": {
+      "label": "Low Spender (Lunite Sub)",
+      "monthly_cost": 4.99,
+      "monthly_pulls": 45.625,
+      "months_for_guaranteed_featured": 2,
+      "notes": "Best value per dollar"
+    },
+    "moderate": {
+      "label": "Moderate Spender",
+      "monthly_cost": 25,
+      "estimated_monthly_pulls": 60,
+      "notes": "Lunite Sub + occasional top-ups"
+    },
+    "whale": {
+      "label": "Whale",
+      "cost_per_featured": 195.04,
+      "notes": "Buys Lunite as needed, retail pricing (NO recurring bonus)"
+    }
+  },
+  "webapp_quick_stats": {
+    "avg_cost_featured_char_retail": 195.04,
+    "avg_cost_featured_char_subscription": 23.7,
+    "avg_cost_featured_weapon_retail": 128.38,
+    "lucky_10_percent": 65,
+    "median_pulls": 125,
+    "unlucky_10_percent": 156,
+    "worst_case_pulls": 160,
+    "weapon_advantage": "Weapons guaranteed in ~52 pulls average (no 50/50!)"
+  },
+  "key_differences_from_genshin": {
+    "advantages": [
+      "Lower hard pity (80 vs 90)",
+      "Higher base rate (0.8% vs 0.6%)",
+      "NO 50/50 on weapon banner - always guaranteed!",
+      "Better F2P income (~29 vs ~34 pulls/month)"
+    ],
+    "disadvantages": [
+      "NO recurring shop bonus (first-time only)",
+      "Fewer free resources overall",
+      "More expensive subscription relative to value"
+    ]
+  }
+}
