@@ -1,1 +1,88 @@
-
+{
+  "meta": {
+    "game_id": "genshin-impact",
+    "game_name": "Genshin Impact",
+    "developer": "HoYoverse",
+    "data_version": "1.0",
+    "last_updated": "2026-02-11",
+    "data_status": "Public Release",
+    "verification_method": "Official In-Game Disclosure"
+  },
+  "gacha_rates": {
+    "character_banner": {
+      "base_5star": 0.006,
+      "soft_pity_start_5star": 74,
+      "hard_pity_5star": 90,
+      "base_4star": 0.051,
+      "hard_pity_4star": 10,
+      "guarantee_system": "50-50 first, guaranteed second",
+      "consolidated_5star_rate": 0.016
+    },
+    "weapon_banner": {
+      "base_5star": 0.007,
+      "soft_pity_start_5star": 63,
+      "hard_pity_5star": 80,
+      "guarantee_system": "Epitomized Path",
+      "pulls_for_guarantee": 240
+    }
+  },
+  "currency_flow": {
+    "bought_currency": "Genesis Crystals",
+    "converted_currency": "Primogems",
+    "pull_item": "Intertwined Fate",
+    "conversion_ratio": 1,
+    "cost_per_pull_in_converted": 160,
+    "flow_description": "1 Genesis Crystals converts to 1 Primogems. 1 Pull costs 160 Primogems (160 Primogems = 1 Intertwined Fate)."
+  },
+  "shop_data": {
+    "packs": [
+      {
+        "name": "60 Genesis Crystals",
+        "price_usd": 0.99,
+        "amount_premium": 60,
+        "bonus_first_time": 60,
+        "bonus_standard": 9
+      },
+      {
+        "name": "300 Genesis Crystals",
+        "price_usd": 4.99,
+        "amount_premium": 300,
+        "bonus_first_time": 300,
+        "bonus_standard": 45
+      },
+      {
+        "name": "980 Genesis Crystals",
+        "price_usd": 14.99,
+        "amount_premium": 980,
+        "bonus_first_time": 980,
+        "bonus_standard": 147
+      },
+      {
+        "name": "1980 Genesis Crystals",
+        "price_usd": 29.99,
+        "amount_premium": 1980,
+        "bonus_first_time": 1980,
+        "bonus_standard": 297
+      },
+      {
+        "name": "3280 Genesis Crystals",
+        "price_usd": 49.99,
+        "amount_premium": 3280,
+        "bonus_first_time": 3280,
+        "bonus_standard": 492
+      },
+      {
+        "name": "6480 Genesis Crystals",
+        "price_usd": 99.99,
+        "amount_premium": 6480,
+        "bonus_first_time": 6480,
+        "bonus_standard": 972
+      }
+    ]
+  },
+  "analysis": {
+    "base_pull_cost_usd": 2.15,
+    "hard_pity_cost_usd": 193.22,
+    "worst_case_cost_usd": 386.43
+  }
+}
