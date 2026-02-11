@@ -1,88 +1,345 @@
 {
   "meta": {
-    "game_id": "genshin-impact",
-    "game_name": "Genshin Impact",
+    "id": "genshin-impact",
+    "name": "Genshin Impact",
     "developer": "HoYoverse",
-    "data_version": "1.0",
-    "last_updated": "2026-02-11",
-    "data_status": "Public Release",
-    "verification_method": "Official In-Game Disclosure"
+    "release_date": "2020-09-28",
+    "mechanics_version": "5.0+ (Capturing Radiance)",
+    "last_updated": "2026-02-11"
   },
-  "gacha_rates": {
+  "game_mechanics": {
     "character_banner": {
-      "base_5star": 0.006,
-      "soft_pity_start_5star": 74,
-      "hard_pity_5star": 90,
-      "base_4star": 0.051,
-      "hard_pity_4star": 10,
-      "guarantee_system": "50-50 first, guaranteed second",
-      "consolidated_5star_rate": 0.016
+      "base_rate": 0.006,
+      "soft_pity": {
+        "starts_at": 74,
+        "rate_during_soft_pity": 0.066
+      },
+      "hard_pity": 90,
+      "capturing_radiance": {
+        "enabled": true,
+        "win_rate_first": 0.55,
+        "lose_rate_first": 0.45,
+        "guaranteed_second": 1
+      },
+      "statistical_averages": {
+        "any_5star": 62.5,
+        "featured_character": 94.5
+      }
     },
     "weapon_banner": {
-      "base_5star": 0.007,
-      "soft_pity_start_5star": 63,
-      "hard_pity_5star": 80,
-      "guarantee_system": "Epitomized Path",
-      "pulls_for_guarantee": 240
+      "base_rate": 0.007,
+      "soft_pity": {
+        "starts_at": 63,
+        "rate_during_soft_pity": 0.07
+      },
+      "hard_pity": 80,
+      "epitomized_path": {
+        "win_rate_first": 0.75,
+        "guaranteed_fate_points": 2,
+        "max_pulls_guarantee": 240
+      }
     }
   },
-  "currency_flow": {
-    "bought_currency": "Genesis Crystals",
-    "converted_currency": "Primogems",
-    "pull_item": "Intertwined Fate",
-    "conversion_ratio": 1,
-    "cost_per_pull_in_converted": 160,
-    "flow_description": "1 Genesis Crystals converts to 1 Primogems. 1 Pull costs 160 Primogems (160 Primogems = 1 Intertwined Fate)."
-  },
-  "shop_data": {
-    "packs": [
+  "currency_system": {
+    "flow": {
+      "premium": "Genesis Crystals",
+      "freemium": "Primogems",
+      "item": "Intertwined Fate"
+    },
+    "conversion": {
+      "ratio": 1,
+      "cost_per_pull": 160
+    },
+    "shop_packs": [
       {
         "name": "60 Genesis Crystals",
         "price_usd": 0.99,
-        "amount_premium": 60,
+        "base_amount": 60,
         "bonus_first_time": 60,
-        "bonus_standard": 9
+        "total_first_time": 120,
+        "pulls_first_time": 0,
+        "cost_per_pull_first": 1.32,
+        "bonus_standard": 9,
+        "total_standard": 69,
+        "pulls_standard": 0,
+        "cost_per_pull_standard": 2.3
       },
       {
         "name": "300 Genesis Crystals",
         "price_usd": 4.99,
-        "amount_premium": 300,
+        "base_amount": 300,
         "bonus_first_time": 300,
-        "bonus_standard": 45
+        "total_first_time": 600,
+        "pulls_first_time": 3,
+        "cost_per_pull_first": 1.33,
+        "bonus_standard": 45,
+        "total_standard": 345,
+        "pulls_standard": 2,
+        "cost_per_pull_standard": 2.31
       },
       {
         "name": "980 Genesis Crystals",
         "price_usd": 14.99,
-        "amount_premium": 980,
+        "base_amount": 980,
         "bonus_first_time": 980,
-        "bonus_standard": 147
+        "total_first_time": 1960,
+        "pulls_first_time": 12,
+        "cost_per_pull_first": 1.22,
+        "bonus_standard": 147,
+        "total_standard": 1127,
+        "pulls_standard": 7,
+        "cost_per_pull_standard": 2.13
       },
       {
         "name": "1980 Genesis Crystals",
         "price_usd": 29.99,
-        "amount_premium": 1980,
+        "base_amount": 1980,
         "bonus_first_time": 1980,
-        "bonus_standard": 297
+        "total_first_time": 3960,
+        "pulls_first_time": 24,
+        "cost_per_pull_first": 1.21,
+        "bonus_standard": 297,
+        "total_standard": 2277,
+        "pulls_standard": 14,
+        "cost_per_pull_standard": 2.11
       },
       {
         "name": "3280 Genesis Crystals",
         "price_usd": 49.99,
-        "amount_premium": 3280,
+        "base_amount": 3280,
         "bonus_first_time": 3280,
-        "bonus_standard": 492
+        "total_first_time": 6560,
+        "pulls_first_time": 41,
+        "cost_per_pull_first": 1.22,
+        "bonus_standard": 492,
+        "total_standard": 3772,
+        "pulls_standard": 23,
+        "cost_per_pull_standard": 2.12
       },
       {
         "name": "6480 Genesis Crystals",
         "price_usd": 99.99,
-        "amount_premium": 6480,
+        "base_amount": 6480,
         "bonus_first_time": 6480,
-        "bonus_standard": 972
+        "total_first_time": 12960,
+        "pulls_first_time": 81,
+        "cost_per_pull_first": 1.23,
+        "bonus_standard": 972,
+        "total_standard": 7452,
+        "pulls_standard": 46,
+        "cost_per_pull_standard": 2.15
       }
     ]
   },
-  "analysis": {
-    "base_pull_cost_usd": 2.15,
-    "hard_pity_cost_usd": 193.22,
-    "worst_case_cost_usd": 386.43
+  "free_income": {
+    "daily_commissions": {
+      "primogems_per_day": 60,
+      "pulls_per_month": 11.25
+    },
+    "events_monthly": {
+      "primogems_average": 2400,
+      "pulls_per_month": 15
+    },
+    "abyss_monthly": {
+      "primogems_per_cycle": 600,
+      "pulls_per_month": 7.5
+    },
+    "total_f2p_monthly": 33.75
+  },
+  "subscriptions": {
+    "welkin_moon": {
+      "price_usd": 4.99,
+      "primogems_immediate": 300,
+      "primogems_daily": 90,
+      "duration_days": 30,
+      "total_primogems": 2700,
+      "pulls_per_month": 16.875,
+      "cost_per_pull": 0.3
+    },
+    "battle_pass": {
+      "price_usd": 9.99,
+      "fates_direct": 4,
+      "primogems": 680,
+      "total_pulls": 8.25,
+      "cost_per_pull": 1.21
+    }
+  },
+  "cost_per_pull_analysis": {
+    "retail_standard": 2.15,
+    "retail_first_time_bonus": 1.23,
+    "welkin_moon": 0.3,
+    "battle_pass": 1.21,
+    "note": "Retail prices assume $99.99 pack with standard 15% bonus"
+  },
+  "probability_distributions": {
+    "character_banner": {
+      "any_5star": {
+        "p10": 34,
+        "p25": 48,
+        "p50": 62,
+        "p75": 77,
+        "p90": 84,
+        "p99": 90
+      },
+      "guaranteed_featured": {
+        "p10": 62,
+        "p25": 77,
+        "p50": 94,
+        "p75": 125,
+        "p90": 152,
+        "p99": 180
+      }
+    },
+    "weapon_banner": {
+      "any_5star": {
+        "p10": 28,
+        "p25": 42,
+        "p50": 53,
+        "p75": 67,
+        "p90": 76,
+        "p99": 80
+      },
+      "guaranteed_weapon": {
+        "p10": 53,
+        "p25": 67,
+        "p50": 106,
+        "p75": 160,
+        "p90": 210,
+        "p99": 240
+      }
+    }
+  },
+  "cost_scenarios": {
+    "character_banner": {
+      "any_5star": {
+        "label": "Any 5-Star Character (Not Guaranteed Featured)",
+        "percentiles": {
+          "lucky_10": {
+            "pulls": 34,
+            "cost_retail": 72.99,
+            "cost_welkin": 10.2,
+            "cost_first_time": 41.97
+          },
+          "median": {
+            "pulls": 62,
+            "cost_retail": 133.11,
+            "cost_welkin": 18.6,
+            "cost_first_time": 76.54
+          },
+          "unlucky_10": {
+            "pulls": 84,
+            "cost_retail": 180.34,
+            "cost_welkin": 25.2,
+            "cost_first_time": 103.69
+          },
+          "hard_pity": {
+            "pulls": 90,
+            "cost_retail": 193.22,
+            "cost_welkin": 27,
+            "cost_first_time": 111.1
+          }
+        }
+      },
+      "guaranteed_featured": {
+        "label": "Guaranteed Featured Character (With Capturing Radiance 55/45)",
+        "note": "Accounts for potential 50/50 loss and subsequent guarantee",
+        "percentiles": {
+          "lucky_10": {
+            "pulls": 62,
+            "cost_retail": 133.11,
+            "cost_welkin": 18.6,
+            "cost_first_time": 76.54
+          },
+          "median": {
+            "pulls": 94,
+            "cost_retail": 201.8,
+            "cost_welkin": 28.2,
+            "cost_first_time": 116.04,
+            "note": "Most common outcome: lose 50/50 once, get guarantee"
+          },
+          "unlucky_10": {
+            "pulls": 152,
+            "cost_retail": 326.32,
+            "cost_welkin": 45.6,
+            "cost_first_time": 187.64
+          },
+          "worst_case": {
+            "pulls": 180,
+            "cost_retail": 386.43,
+            "cost_welkin": 54,
+            "cost_first_time": 222.2,
+            "note": "Absolute worst: double hard pity"
+          }
+        }
+      }
+    },
+    "weapon_banner": {
+      "any_5star": {
+        "label": "Any 5-Star Weapon",
+        "percentiles": {
+          "lucky_10": {
+            "pulls": 28,
+            "cost_retail": 60.11
+          },
+          "median": {
+            "pulls": 53,
+            "cost_retail": 113.78
+          },
+          "hard_pity": {
+            "pulls": 80,
+            "cost_retail": 171.75
+          }
+        }
+      },
+      "guaranteed_weapon": {
+        "label": "Guaranteed Specific Weapon (Epitomized Path)",
+        "note": "May require up to 3 × 5-star pulls with fate points",
+        "percentiles": {
+          "median": {
+            "pulls": 106,
+            "cost_retail": 227.57
+          },
+          "worst_case": {
+            "pulls": 240,
+            "cost_retail": 515.25
+          }
+        }
+      }
+    }
+  },
+  "spending_profiles": {
+    "f2p": {
+      "label": "Free-to-Play",
+      "monthly_cost": 0,
+      "monthly_pulls": 33.75,
+      "months_for_guaranteed_featured": 3,
+      "notes": "Events, dailies, Abyss only"
+    },
+    "low_spender": {
+      "label": "Low Spender (Welkin + BP)",
+      "monthly_cost": 14.98,
+      "monthly_pulls": 58.875,
+      "months_for_guaranteed_featured": 2,
+      "notes": "Best value per dollar"
+    },
+    "moderate": {
+      "label": "Moderate Spender",
+      "monthly_cost": 50,
+      "estimated_monthly_pulls": 80,
+      "notes": "Welkin + BP + occasional top-ups"
+    },
+    "whale": {
+      "label": "Whale",
+      "cost_per_featured": 202.88,
+      "notes": "Buys genesis crystals as needed, retail pricing"
+    }
+  },
+  "webapp_quick_stats": {
+    "avg_cost_featured_char_retail": 202.88,
+    "avg_cost_featured_char_welkin": 28.35,
+    "lucky_10_percent": 62,
+    "median_pulls": 94,
+    "unlucky_10_percent": 152,
+    "worst_case_pulls": 180
   }
 }
